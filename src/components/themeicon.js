@@ -1,4 +1,4 @@
-class ThemeIcon extends HTMLElement {
+export class ThemeIcon extends HTMLElement {
     constructor() {
         super();
     }
@@ -18,5 +18,3 @@ class ThemeIcon extends HTMLElement {
         circles[2].setAttribute('class', classes[2]);
     }
 }
-
-window.customElements.define('theme-icon', ThemeIcon);

@@ -1,4 +1,4 @@
-class SwitchToggle extends HTMLElement {
+export class SwitchToggle extends HTMLElement {
     constructor() {
         super();
     }
@@ -50,5 +50,3 @@ class SwitchToggle extends HTMLElement {
         }))
     }
 }
-
-window.customElements.define('switch-toggle', SwitchToggle);
