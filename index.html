@@ -1,0 +1,149 @@
+<html theme="default" mode="dark">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+        <link rel="manifest" href="assets/icons/site.webmanifest">
+        <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#2792df">
+        <link rel="shortcut icon" href="assets/icons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
+        <meta name="theme-color" content="#1f1f1f">
+
+        <title>Code Pattern Wheel</title>
+        <link rel="stylesheet" href="style/css.css">
+        <link rel="stylesheet" href="style/default-theme.css">
+        <link rel="stylesheet" href="style/cold-theme.css">
+        <link rel="stylesheet" href="style/warm-theme.css">
+        <link rel="stylesheet" href="style/grayscale-theme.css">
+        <link rel="stylesheet" href="style/ludka-theme.css">
+        <link rel="stylesheet" href="style/orprgr-theme.css">
+
+        <script src="components/switchtoggle.js"></script>
+        <script src="components/morevertical.js"></script>
+        <script src="components/themeicon.js"></script>
+        <script src="components/contextmenu.js"></script>
+    </head>
+    <body>
+        <context-menu>
+            <template>
+                <div class="space--bottom">
+                    <div class="flexbox flexbox--row space--middle row">
+                        <div class="flex space--right-2" onclick="document.querySelector('#mode-input').toggle()">Dark Mode</div>
+                        <div>
+                            <switch-toggle id="mode-input" value="true" onchange="setMode(event.detail.value)"></switch-toggle>
+                        </div>
+                    </div>
+                    <div class="flexbox flexbox--row row">
+                        Theme
+                    </div>
+                    <div id="theme-options">
+                        <div class="flexbox flexbox--row row space--around">
+                            <button value="default" class="btn btn--border btn--border-active" onclick="setTheme(this.value)">
+                                <theme-icon classes="theme-fill-1 theme--default,theme-fill-2 theme--default,theme-fill-3 theme--default"></theme-icon>
+                            </button>
+                            <button value="cold" class="btn btn--border" onclick="setTheme(this.value)">
+                                <theme-icon classes="theme-fill-1 theme--cold,theme-fill-2 theme--cold,theme-fill-3 theme--cold"></theme-icon>
+                            </button>
+                            <button value="warm" class="btn btn--border" onclick="setTheme(this.value)">
+                                <theme-icon classes="theme-fill-1 theme--warm,theme-fill-2 theme--warm,theme-fill-3 theme--warm"></theme-icon>
+                            </button>
+                        </div>
+                        <div class="flexbox flexbox--row row space--around">
+                            <button value="grayscale" class="btn btn--border" onclick="setTheme(this.value)">
+                                <theme-icon classes="theme-fill-1 theme--grayscale,theme-fill-2 theme--grayscale,theme-fill-3 theme--grayscale"></theme-icon>
+                            </button>
+                            <button value="ludka" class="btn btn--border" onclick="setTheme(this.value)">
+                                <theme-icon classes="theme-fill-1 theme--ludka,theme-fill-2 theme--ludka,theme-fill-3 theme--ludka"></theme-icon>
+                            </button>
+                            <button value="orprgr" class="btn btn--border" onclick="setTheme(this.value)">
+                                <theme-icon classes="theme-fill-1 theme--orprgr,theme-fill-2 theme--orprgr,theme-fill-3 theme--orprgr"></theme-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </context-menu>
+        <div class="wheel">
+            <svg class="wheel__inner__container" width="400px" height="400px" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+                
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="c1 creational leaf__body">Abstract&nbsp;Factory</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="c2 creational leaf__body">Builder</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="c3 creational leaf__body">Factory&nbsp;Method</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="c4 creational leaf__body">Prototype</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="c5 creational leaf__body">Singleton</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s1 structural leaf__body">Adapter</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s2 structural leaf__body">Bridge</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s3 structural leaf__body">Composite</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s4 structural leaf__body">Decorator</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s5 structural leaf__body">Facade</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s6 structural leaf__body">Flyweight</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="s7 structural leaf__body">Proxy</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b1 behavioral leaf__body">Chain&nbsp;of&nbsp;Responsibility</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b2 behavioral leaf__body">Command</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b3 behavioral leaf__body">Interpreter</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b4 behavioral leaf__body">Iterator</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b5 behavioral leaf__body">Mediator</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b6 behavioral leaf__body">Memento</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b7 behavioral leaf__body">Observer</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b8 behavioral leaf__body">State</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b9 behavioral leaf__body">Strategy</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b10 behavioral leaf__body">Template&nbsp;Method</div>
+            </div>
+            <div class="wheel__leaf wheel__leaf--disabled">
+                <div class="b11 behavioral leaf__body">Visitor</div>
+            </div>
+        </div>
+        <div class="ref">
+            Inspired by the book <a href="https://en.wikipedia.org/wiki/Design_Patterns">Design Patterns</a> by <a href="https://en.wikipedia.org/wiki/Erich_Gamma">Erich Gamma</a> Richard Helm <a href="https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)">Ralph Johnson</a> and <a href="https://en.wikipedia.org/wiki/John_Vlissides">John Vissides</a>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>

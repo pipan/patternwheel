@@ -1,0 +1,41 @@
+:root[theme="grayscale"] {
+    --creational: #303030;
+    --structural: #585858;
+    --behavioral: #808080;
+
+    --c1: #282828;
+    --c2: #323232;
+    --c3: #3A3A3A;
+    --c4: #2B2B2B;
+    --c5: #242424;
+
+    --s1: #474747;
+    --s2: #606060;
+    --s3: #434343;
+    --s4: #525252;
+    --s5: #4B4B4B;
+    --s6: #686868;
+    --s7: #515050;
+
+    --b1: #8A8A8A;
+    --b2: #747474;
+    --b3: #AEAEAE;
+    --b4: #686868;
+    --b5: #8E8C8C;
+    --b6: #A5A5A5;
+    --b7: #8C8C8C;
+    --b8: #616161;
+    --b9: #727272;
+    --b10: #828282;
+    --b11: #939393;
+}
+
+.theme--grayscale.theme-fill-1 {
+    fill: #303030;
+}
+.theme--grayscale.theme-fill-2 {
+    fill: #585858;
+}
+.theme--grayscale.theme-fill-3 {
+    fill: #808080;
+}

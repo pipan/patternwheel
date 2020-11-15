@@ -1,0 +1,41 @@
+:root[theme="ludka"] {
+    --creational: #D9069E;
+    --structural: #9450D8;
+    --behavioral: #2435CE;
+
+    --c1: #FFA0FB;
+    --c2: #F319B6;
+    --c3: #DE09E2;
+    --c4: #D9069E;
+    --c5: #F579E1;
+
+    --s1: #7F1ECB;
+    --s2: #7C00F9;
+    --s3: #C77BF5;
+    --s4: #5D12A9;
+    --s5: #B57BF0;
+    --s6: #9439DB;
+    --s7: #C6A4E9;
+
+    --b1: #10B3FA;
+    --b2: #92DEFF;
+    --b3: #0D23E5;
+    --b4: #0D64E5;
+    --b5: #86B2F2;
+    --b6: #2435CE;
+    --b7: #2373EA;
+    --b8: #5E9CF9;
+    --b9: #0D64E5;
+    --b10: #0CBBF2;
+    --b11: #62D9FF;
+}
+
+.theme--ludka.theme-fill-1 {
+    fill: #D9069E;
+}
+.theme--ludka.theme-fill-2 {
+    fill: #9450D8;
+}
+.theme--ludka.theme-fill-3 {
+    fill: #2435CE;
+}
