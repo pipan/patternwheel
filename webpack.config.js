@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -21,18 +22,9 @@ module.exports = {
                     keep_classnames: true,
                     keep_fnames: true
                 }
-          })
-        ],
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: 'styles',
-                    test: /\.css$/,
-                    chunks: 'all',
-                    enforce: true,
-                },
-            },
-        },
+          }),
+          new OptimizeCssAssetsPlugin()
+        ]
     },
     entry: {
         "main": ['./src/main.js']
