@@ -1,4 +1,4 @@
-class MoreVertical extends HTMLElement {
+export class MoreVertical extends HTMLElement {
     constructor() {
         super();
     }
@@ -12,5 +12,3 @@ class MoreVertical extends HTMLElement {
         this.querySelector('svg').setAttribute('class', this.getAttribute('class'));
     }
 }
-
-window.customElements.define('more-vertical', MoreVertical);

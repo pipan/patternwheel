@@ -1,4 +1,4 @@
-class ContextMenu extends HTMLElement {
+export class ContextMenu extends HTMLElement {
     constructor() {
         super();
     }
@@ -33,5 +33,3 @@ class ContextMenu extends HTMLElement {
         this.querySelector('.contextmenu__body').style.display = "none";
     }
 }
-
-window.customElements.define('context-menu', ContextMenu);
