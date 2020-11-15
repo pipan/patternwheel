@@ -323,7 +323,7 @@ a:hover {
     content: '';
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 14px;
     display: block;
     width: 24px;
     height: 24px;
@@ -338,7 +338,7 @@ a:hover {
 }
 
 .switch[value="true"]::after {
-    right: 14px;
+    right: 0px;
     background-color: var(--primary);
 }
 .ref {
@@ -361,6 +361,10 @@ a:hover {
     .wheel {
         left: auto;
         right: 100px;
+    }
+
+    .ref, .contextmenu__body, .svg-fg, .wheel__inner, .wheel__leaf, .leaf__body, .btn--border, .switch::before, .switch::after, body, a {
+        transition: none;
     }
 }
 

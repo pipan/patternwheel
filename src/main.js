@@ -7,7 +7,7 @@ require('./style/ludka-theme.css');
 require('./style/orprgr-theme.css');
 
 import { SingleTouchDetector } from './scripts/singletouchdetector';
-import { createArc, createInnerCircle } from './scripts/svg';
+import { createInnerCircle } from './scripts/svg';
 import { setMode, setTheme, rotate } from './scripts/actions';
 
 import { ContextMenu } from './components/contextmenu';
