@@ -38,7 +38,9 @@ module.exports = {
             template: "./src/index.html",
             title: "Code Pattern Wheel"
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].bundle.css'
+        }),
         new CopyPlugin({
             patterns: [
                 { from: "./assets", to: "assets" },
