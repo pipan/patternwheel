@@ -59,7 +59,7 @@ document.addEventListener('wheel', (e) => {
 
 const touchDetector = new SingleTouchDetector();
 touchDetector.connect((delta) => {
-    rotate(delta.y * -0.003);
+    rotate(delta.y * -0.006);
 });
 
 window.setTheme = setTheme;
