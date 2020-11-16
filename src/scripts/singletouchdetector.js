@@ -7,7 +7,6 @@ export class SingleTouchDetector {
         this.velocity = 0;
         this.decelerator = new Decelerator(4);
         this.decelerator.connect((value) => {
-            console.log('decelerator', value);
             this.trigger({
                 x: this.currentPosition.x,
                 y: this.currentPosition.y + value
