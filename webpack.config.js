@@ -21,8 +21,8 @@ module.exports = {
                     keep_classnames: true,
                     keep_fnames: true
                 }
-          }),
-          new OptimizeCssAssetsPlugin()
+            }),
+            new OptimizeCssAssetsPlugin()
         ]
     },
     entry: {
@@ -36,7 +36,7 @@ module.exports = {
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
-            title: "Code Pattern Wheel"
+            title: "Design Patterns Wheel"
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].bundle.css'
