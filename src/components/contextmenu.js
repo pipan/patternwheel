@@ -7,12 +7,12 @@ export class ContextMenu extends HTMLElement {
         const slot = this.children[0].content.cloneNode(true);
         this.innerHTML = `
         <div class="contextmenu">
-            <button type="button" class="btn btn--circle">
+            <button type="button" class="btn btn--circle" aria-label="Open context menu">
                 <more-vertical class="svg-fg"></more-vertical>
             </button>
             <div class="contextmenu__body" style="display: none;">
                 <div style="display: flex; flex-direction: row-reverse">
-                    <button type="button" class="contextmenu__close btn btn--circle">
+                    <button type="button" class="contextmenu__close btn btn--circle" aria-label="Close context menu">
                         <more-vertical class="svg-fg"></more-vertical>
                     </button>
                 </div>

@@ -24,18 +24,18 @@ export class SingleTouchDetector {
             } else {
                 this.currentPosition = null;
             }
-        });
+        }, {passive: true});
         document.addEventListener('touchend', (e) => {
             const normalize = Math.min(Math.max(this.velocity, -100), 100);
             this.decelerator.start(normalize);
-        });
+        }, {passive: true});
         document.addEventListener('touchmove', (e) => {
             this.velocity = e.changedTouches[0].clientY - this.currentPosition.y;
             this.trigger({
                 x: e.changedTouches[0].clientX,
                 y: e.changedTouches[0].clientY
             });
-        });
+        }, {passive: true});
     }
 
     connect (fn) {
