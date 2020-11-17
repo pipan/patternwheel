@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
 document.addEventListener('wheel', (e) => {
     rotate(e.deltaY * 0.01);
-});
+}, {passive: true});
 
 const touchDetector = new SingleTouchDetector();
 touchDetector.connect((delta) => {
@@ -64,3 +64,14 @@ touchDetector.connect((delta) => {
 
 window.setTheme = setTheme;
 window.setMode = setMode;
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(function(registration) {
+      console.log('Registration successful, scope is:', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('Service worker registration failed, error:', error);
+    });
+}
+  

@@ -1,4 +1,5 @@
-<html theme="default" mode="dark">
+<!DOCTYPE html>
+<html theme="default" mode="dark" lang="en">
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
@@ -17,6 +18,9 @@
         <title>Design Patterns Wheel</title>
     </head>
     <body>
+        <noscript>
+            <strong>We're sorry but Wheel doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
         <context-menu>
             <template>
                 <div class="space--bottom">
@@ -31,24 +35,24 @@
                     </div>
                     <div id="theme-options">
                         <div class="flexbox flexbox--row row space--around">
-                            <button value="default" class="btn btn--border btn--border-active" onclick="setTheme(this.value)">
+                            <button value="default" class="btn btn--border btn--border-active" onclick="setTheme(this.value)" aria-label="Default theme">
                                 <theme-icon classes="theme-fill-1 theme--default,theme-fill-2 theme--default,theme-fill-3 theme--default"></theme-icon>
                             </button>
-                            <button value="cold" class="btn btn--border" onclick="setTheme(this.value)">
+                            <button value="cold" class="btn btn--border" onclick="setTheme(this.value)" aria-label="Cold theme">
                                 <theme-icon classes="theme-fill-1 theme--cold,theme-fill-2 theme--cold,theme-fill-3 theme--cold"></theme-icon>
                             </button>
-                            <button value="warm" class="btn btn--border" onclick="setTheme(this.value)">
+                            <button value="warm" class="btn btn--border" onclick="setTheme(this.value)" aria-label="Warm theme">
                                 <theme-icon classes="theme-fill-1 theme--warm,theme-fill-2 theme--warm,theme-fill-3 theme--warm"></theme-icon>
                             </button>
                         </div>
                         <div class="flexbox flexbox--row row space--around">
-                            <button value="grayscale" class="btn btn--border" onclick="setTheme(this.value)">
+                            <button value="grayscale" class="btn btn--border" onclick="setTheme(this.value)" aria-label="Grayscale theme">
                                 <theme-icon classes="theme-fill-1 theme--grayscale,theme-fill-2 theme--grayscale,theme-fill-3 theme--grayscale"></theme-icon>
                             </button>
-                            <button value="ludka" class="btn btn--border" onclick="setTheme(this.value)">
+                            <button value="ludka" class="btn btn--border" onclick="setTheme(this.value)" aria-label="Ludka theme">
                                 <theme-icon classes="theme-fill-1 theme--ludka,theme-fill-2 theme--ludka,theme-fill-3 theme--ludka"></theme-icon>
                             </button>
-                            <button value="orprgr" class="btn btn--border" onclick="setTheme(this.value)">
+                            <button value="orprgr" class="btn btn--border" onclick="setTheme(this.value)" aria-label="Forest theme">
                                 <theme-icon classes="theme-fill-1 theme--orprgr,theme-fill-2 theme--orprgr,theme-fill-3 theme--orprgr"></theme-icon>
                             </button>
                         </div>

@@ -1,6 +1,6 @@
 {
-    "name": "Code Pattern Wheel",
-    "short_name": "Code Pattern Wheel",
+    "name": "Design Patterns Wheel",
+    "short_name": "Design Patterns Wheel",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -15,5 +15,6 @@
     ],
     "theme_color": "#1f1f1f",
     "background_color": "#1f1f1f",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/"
 }
