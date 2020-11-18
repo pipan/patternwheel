@@ -18,10 +18,12 @@ export class SwitchToggle extends HTMLElement {
     }
 
     connectedCallback() {
+        const labelledby = this.getAttribute('labelledby');
         this.innerHTML = `
-        <div class="switch" tabindex="0"></div>
+        <div class="switch" tabindex="0" role="checkbox"></div>
         `;
         const switchElement = this.querySelector('.switch');
+        switchElement.setAttribute('aria-labelledby', labelledby);
         switchElement.addEventListener('click', (e) => {
             this.toggle()
         });
@@ -43,6 +45,7 @@ export class SwitchToggle extends HTMLElement {
             return;
         }
         switchElement.setAttribute('value', value);
+        switchElement.setAttribute('aria-checked', value);
         this.dispatchEvent(new CustomEvent('change', {
             detail: {
                 value: value

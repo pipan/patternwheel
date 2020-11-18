@@ -25,9 +25,9 @@
             <template>
                 <div class="space--bottom">
                     <div class="flexbox flexbox--row space--middle row">
-                        <div class="flex space--right-2" onclick="document.querySelector('#mode-input').toggle()">Dark Mode</div>
+                        <div id="mode-label" class="flex space--right-2" onclick="document.querySelector('#mode-input').toggle()">Dark Mode</div>
                         <div>
-                            <switch-toggle id="mode-input" value="true" onchange="setMode(event.detail.value)"></switch-toggle>
+                            <switch-toggle id="mode-input" labelledby="mode-label" value="true" onchange="setMode(event.detail.value)"></switch-toggle>
                         </div>
                     </div>
                     <div class="flexbox flexbox--row row">
