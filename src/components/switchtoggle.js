@@ -11,6 +11,12 @@ export class SwitchToggle extends HTMLElement {
         return (this.getAttribute('value') === 'true');
     }
 
+    setValue(value) {
+        const switchElement = this.querySelector('.switch');
+        switchElement.setAttribute('value', value);
+        switchElement.setAttribute('aria-checked', value);
+    }
+
     attributeChangedCallback(name, oldValue, newValue) {
         if (name === 'value' && oldValue !== newValue) {
             this.set(newValue === 'true');
@@ -32,7 +38,7 @@ export class SwitchToggle extends HTMLElement {
                 this.toggle();
             }
         });
-        switchElement.setAttribute('value', this.getValue());
+        this.setValue(this.getValue());
     }
 
     toggle() {
@@ -44,8 +50,7 @@ export class SwitchToggle extends HTMLElement {
         if (!switchElement) {
             return;
         }
-        switchElement.setAttribute('value', value);
-        switchElement.setAttribute('aria-checked', value);
+        this.setValue(value);
         this.dispatchEvent(new CustomEvent('change', {
             detail: {
                 value: value
